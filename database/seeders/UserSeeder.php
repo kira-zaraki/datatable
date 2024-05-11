@@ -26,19 +26,5 @@ class UserSeeder extends Seeder
         $user->save();
 
         $user->assignRole('ADMIN');
-
-        $user = new User();
-        $user->name = 'jack lorem';
-        $user->email = 'jack@gmail.com';
-        $user->city_id = City::first()->id;
-        $user->password = Hash::make('123456');
-        $user->save();
-
-        $user = new User();
-        $user->name = 'khalid ipsum';
-        $user->email = 'khalid@gmail.com';
-        $user->city_id = City::first()->id;
-        $user->password = Hash::make('123456');
-        $user->save();
     }
 }

@@ -10,7 +10,9 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900">
                     <div class="row justify-content-end">
-                        <x-export-list :href='"user.export"'></x-export-list>
+                        @if(auth()->user()->is_admin)
+                            <x-export-list :href='"user.export"'></x-export-list>
+                        @endif
                     </div>
                     <table id="user-table" class="table">
                         <thead>
